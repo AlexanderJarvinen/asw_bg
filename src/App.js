@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { AnchorProvider, AnchorLink } from "react-anchor-navigation"
+import { CustomSection } from "./containers/CustomSection.tsx";
+import { Header } from "./containers/Header.tsx";
 
-function App() {
+const App = () => {
+
+    const list = Array.from({ length: 4 }, (v, i) => ({
+        id : `part-${i + 1}`,
+        title: `Part ${i + 1}`
+    }));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AnchorProvider offset={58}>
+        <Header list={list} />
+        <main>
+          { list.map((item) => (
+              <CustomSection id={item.id} key={item.id}>
+                <h2>{item.title}</h2>
+                <p>⬇️</p>
+              </CustomSection>
+          ))}
+        </main>
+      </AnchorProvider>
     </div>
   );
 }
