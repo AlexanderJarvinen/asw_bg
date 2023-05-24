@@ -1,38 +1,53 @@
 
 .navigation {
-    height: 60px;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    text-align: center;
     width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0.5rem 0rem;
-    background-color: #fff;
-    color: black;
-    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+    background-color: white;
 }
 
 .brandName {
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
-    margin-left: 1rem;
-}
-.navigation-menu {
-    margin-left: auto;
+    margin: 0 2rem 0 1rem;
 }
 
-.navigation-menu ul {
+.navigation-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
+    width: calc(100% - 350px);
+    position: absolute;
+    top: 13px;
+    left: 320px;
+    margin-left: 10px;
 }
+
 .navigation-menu li {
     list-style-type: none;
-    margin: 0 1rem;
 }
+
 .navigation-menu li a {
-    text-decoration: none;
-    display: block;
+    display: inline-block;
     width: 100%;
+    padding: 20px 0;
+    color: black;
+    text-decoration: none;
+    color: #d6fffa;
+    -webkit-transition: color 0.3s, background-color 0.3s;
+    -o-transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border-bottom: 5px solid transparent;
+}
+.navigation-menu li a.selected {
+    color: #2999ff;
+    border-bottom: 5px solid #d6fffa;
 }
 
 .hamburger {
@@ -43,10 +58,14 @@
     border-radius: 50%;
     background-color: #283b8b;
     cursor: pointer;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
     position: absolute;
     top: 50%;
     right: 25px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: none;
 }
@@ -54,39 +73,97 @@
     background-color: #2642af;
 }
 
-@media screen and (max-width: 768px) {
-    .hamburger {
-            display: block;
-        }
+.languages {
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color:#fff;
+}
 
-    .navigation-menu ul {
-            display: none;
-        }
-.navigation-menu ul {)
-        position: absolute;
-        top: 60px;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 77px);
-        background-color: white;
-        border-top: 1px solid black;
+.language {
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+.navigation-menu {
+        font-size: 0.75rem;
+        top: 0;
     }
+
 .navigation-menu li {
-        text-align: center;
+
+        padding:0;
+    }
+
+.navigation-menu li a
+    {
+        padding: 18px 10px ;
+    }
+
+
+.brandName {
         margin: 0;
     }
+
+.languages {
+        top: 25px;
+    }
+
+.hamburger {
+        top: 25px;
+    }
+
+    nav {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+.hamburger {
+        display: block;
+    }
+
+.navigation-menu {
+        display: none;
+    }
+.navigation-menu ul {)
+position: absolute;
+top: 60px;
+left: 0;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+width: 100%;
+height: calc(100vh - 77px);
+background-color: white;
+border-top: 1px solid black;
+}
+.navigation-menu li {
+    text-align: center;
+    margin: 0;
+}
 .navigation-menu li a {
-        color: black;
-        width: 100%;
-        padding: 1.5rem 0;
-    }
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+}
 .navigation-menu li:hover {
-        background-color: #eee;
-    }
+    background-color: #eee;
+}
 
 
 .navigation-menu.expanded ul {
-        display: block;
-    }
+    display: block;
+}
+
+.languages {
+    right: 75px;
+}
 }

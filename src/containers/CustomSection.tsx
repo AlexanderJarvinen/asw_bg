@@ -7,16 +7,11 @@ export const CustomSection = ({ children, ...attributes }) => {
     const selected = attributes.id === hash.substr(1);
     const newClassName = (attributes.className ? `${attributes.className}` : '') + (selected ? ' selected' : '');
 
-    // Logic to register/unregister component
-    // when added/removed from DOM
     useEffect(() => {
         if (ref.current) {
             registerSection(ref.current);
 
-            // Initialization of the component.
-            // If mounted from a SPA without server-side rendering the hash will not
-            // scroll at all, so do it manually
-            if (attributes.id === location.hash.substr(1)) {
+            if (attributes.id === window.location.hash.substr(1)) {
                 ref.current.scrollIntoView();
             }
         }

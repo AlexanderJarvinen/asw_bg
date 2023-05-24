@@ -5,10 +5,37 @@ import { Header } from "./containers/Header.tsx";
 
 const App = () => {
 
-    const list = Array.from({ length: 4 }, (v, i) => ({
-        id : `part-${i + 1}`,
-        title: `Part ${i + 1}`
-    }));
+    // const list = Array.from({ length: 4 }, (v, i) => ({
+    //     id : `part-${i + 1}`,
+    //     title: `Part ${i + 1}`
+    // }));
+
+    const list = [
+        {
+            id : `part-1`,
+            title: `Главная`
+        },
+        {
+            id : `part-2`,
+            title: `О нас`
+        },
+        {
+            id : `part-3`,
+            title: `Фото`
+        },
+        {
+            id : `part-4`,
+            title: `Портфолио`
+        },
+        {
+            id : `part-5`,
+            title: `Оборудование`
+        },
+        {
+            id : `part-6`,
+            title: `Услуги`
+        }
+    ];
 
   return (
     <div className="App">

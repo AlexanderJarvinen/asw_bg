@@ -7,11 +7,22 @@ export const Header = ({ list }) => {
 
     return (
         <nav>
-            { list.map((item) => (
-                <li key={item.id}>
-                    <AnchorLink href={`#${item.id}`} activeClassName="selected">{item.title}</AnchorLink>
-                </li>
-            )) }
+            <a href="/" className="brandName">
+                <img src="./logo.jpg" width={300} height={60}/>
+            </a>
+            <div className="navigation-menu">
+                { list.map((item) => (
+                    <li key={item.id}>
+                        <AnchorLink href={`#${item.id}`} activeClassName="selected">{item.title}</AnchorLink>
+                    </li>
+                )) }
+            </div>
+            <div className="languages">
+                <span className="language" >SRB</span>
+                <span className="language" >ENG</span>
+                <span className="language" >RUS</span>
+            </div>
+
             <button className="hamburger">
                 {/* icon from heroicons.com */}
                 <svg
