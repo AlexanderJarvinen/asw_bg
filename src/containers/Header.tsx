@@ -1,6 +1,7 @@
 import { AnchorLink } from "react-anchor-navigation";
 import './Header.css';
-import {useState} from "react";
+import { useState } from "react";
+import { SerbianFlag, EnglishFlag, RussianFlag } from "../components/flags/FlagIcons.tsx";
 
 export const Header = ({ list }) => {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -8,7 +9,7 @@ export const Header = ({ list }) => {
     return (
         <nav>
             <a href="/" className="brandName">
-                <img src="./logo.jpg" width={300} height={60}/>
+                <img src="./logo.jpg" className="logo"/>
             </a>
             <div className="navigation-menu">
                 { list.map((item) => (
@@ -18,9 +19,9 @@ export const Header = ({ list }) => {
                 )) }
             </div>
             <div className="languages">
-                <span className="language" >SRB</span>
-                <span className="language" >ENG</span>
-                <span className="language" >RUS</span>
+                <span className="language" ><SerbianFlag  /></span>
+                <span className="language" ><EnglishFlag /></span>
+                <span className="language" ><RussianFlag /></span>
             </div>
 
             <button className="hamburger">
@@ -39,5 +40,6 @@ export const Header = ({ list }) => {
                 </svg>
             </button>
         </nav>
+
     );
 }
