@@ -2,8 +2,9 @@ import { AnchorLink } from "react-anchor-navigation";
 import './Header.css';
 import { useState } from "react";
 import { SerbianFlag, EnglishFlag, RussianFlag } from "../components/flags/FlagIcons.tsx";
+import {LOCALES} from "../helpers/i18n/locales.ts";
 
-export const Header = ({ list }) => {
+export const Header = ({ list, setLocale }) => {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
 
     return (
@@ -23,9 +24,15 @@ export const Header = ({ list }) => {
                 )) }
             </div>
             <div className="languages">
-                <span className="language" ><SerbianFlag  /></span>
-                <span className="language" ><EnglishFlag /></span>
-                <span className="language" ><RussianFlag /></span>
+                <span className="language"  onClick={() => {
+                    setLocale(LOCALES.SERBIAN)
+                }}><SerbianFlag  /></span>
+                <span className="language" onClick={() => {
+                    setLocale(LOCALES.ENGLISH)
+                }}><EnglishFlag /></span>
+                <span className="language" onClick={() => {
+                    setLocale(LOCALES.RUSSIAN)
+                }}><RussianFlag /></span>
             </div>
 
             <button
