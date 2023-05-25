@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Rubik Dirt';
+    src: url('RubikDirt-Regular.eot');
+    src: url('RubikDirt-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RubikDirt-Regular.woff2') format('woff2'),
+        url('RubikDirt-Regular.woff') format('woff'),
+        url('RubikDirt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CATArena';
+    src: url('CAT-Arena.eot');
+    src: url('CAT-Arena.eot?#iefix') format('embedded-opentype'),
+        url('CAT-Arena.woff2') format('woff2'),
+        url('CAT-Arena.woff') format('woff'),
+        url('CAT-Arena.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+

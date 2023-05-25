@@ -9,7 +9,10 @@ export const messages = {
             'Fotografije',
         portfolio: 'Portfelj',
         equipment: 'Oprema',
-        services: 'Usluge'
+        services: 'Usluge',
+        rights: "Sva prava zadržana",
+        address: "BEOGRAD, PALILULA, KNEZA DANILA 12/6",
+        tel: "Tel."
     },
     [LOCALES.ENGLISH]: {
         home: 'Home',
@@ -19,7 +22,9 @@ export const messages = {
             'Photos',
         portfolio: 'Our works',
         equipment: 'Equipment',
-        services: 'Our services'
+        rights: "All Rights Reserved",
+        address: "BELGRADE, PALILULA, KNEZA DANILA 12/6",
+        tel: "Tel."
     },
     [LOCALES.RUSSIAN]: {
         home: 'Главная',
@@ -29,6 +34,9 @@ export const messages = {
             'Фото',
         portfolio: 'Портфолио',
         equipment: 'Оборудование',
-        services: 'Услуги'
+        services: 'Услуги',
+        rights: "Все права защищены",
+        address: "БЕЛГРАД, ПАЛИЛУЛА, КНЕЗА ДАНИЛА 12/6",
+        tel: "Тел."
     }
 }

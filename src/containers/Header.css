@@ -49,6 +49,8 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
     border-bottom: 5px solid transparent;
+    font-family: 'CATArena';
+    text-transform: uppercase;
 }
 .navigation-menu li a.selected {
     color: #2999ff;

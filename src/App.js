@@ -2,6 +2,7 @@ import './App.css';
 import { AnchorProvider, AnchorLink } from "react-anchor-navigation"
 import { CustomSection } from "./containers/CustomSection.tsx";
 import { Header } from "./containers/Header.tsx";
+import { Footer } from "./containers/Footer.tsx";
 import { IntlProvider } from 'react-intl';
 import { LOCALES } from './helpers/i18n/locales.ts';
 import { messages } from './helpers/i18n/naming.ts'
@@ -57,6 +58,7 @@ const App = () => {
                   </CustomSection>
               ))}
             </main>
+            <Footer />
           </AnchorProvider>
         </IntlProvider>
     </div>
