@@ -104,6 +104,7 @@
 }
 
 
+
 @media screen and (max-width: 1100px) {
 .navigation-menu {
         font-size: 0.75rem;
@@ -144,60 +145,84 @@
 .navigation-menu {
         display: none;
     }
-.navigation-menu ul {)
-position: absolute;
-top: 60px;
-left: 0;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
--ms-flex-direction: column;
-flex-direction: column;
-width: 100%;
-height: calc(100vh - 77px);
-background-color: white;
-border-top: 1px solid black;
-}
-.navigation-menu li {
-    text-align: center;
-    margin: 0;
-}
-.navigation-menu li a {
-    color: black;
-    width: 100%;
-    padding: 1.5rem 0;
-}
-.navigation-menu li:hover {
-    background-color: #eee;
-}
 
 
-.navigation-menu.expanded ul {
-    display: block;
-}
+.navigation-menu-expanded  {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+        background-color: #000;
+        border-top: 1px solid black;
+    }
 
-.languages {
-    right: 75px;
-    top: 40px;
-}
+
+
+.navigation-bar li {
+        text-align: center;
+        padding: 20px;
+    }
+.navigation-bar li a {
+        color: black;
+        width: 100%;
+        padding: 1.5rem 0;
+        text-decoration: none;
+        color: #d6fffa;
+        -webkit-transition: color 0.3s, background-color 0.3s;
+        -o-transition: color 0.3s, background-color 0.3s;
+        transition: color 0.3s, background-color 0.3s;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        border-bottom: 5px solid transparent;
+    }
+.navigation-bar li:hover {
+        color: #2999ff;
+        background-color: #95b2af;
+    }
+
+.navigation-bar li a.selected {
+        color: #2999ff;
+    }
+
+
+
+        .languages {
+        right: 75px;
+        top: 40px;
+    }
 }
 
 @media screen and (max-width: 535px) {
-    .logo {
+.logo {
         width: 150px;
         height: 30px;
     }
 
-    .language img {
-            width: 20px;
-            height: 20px;
-        }
+.language img {
+        width: 20px;
+        height: 20px;
+    }
 
-    .languages {
+.languages {
         top: 25px;
     }
 
 .hamburger {
         top: 25px;
+    }
+
+.navigation-menu-expanded {
+        top: 47px;
     }
 
 }

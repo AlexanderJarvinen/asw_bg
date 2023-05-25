@@ -11,9 +11,13 @@ export const Header = ({ list }) => {
             <a href="/" className="brandName">
                 <img src="./logo.jpg" className="logo"/>
             </a>
-            <div className="navigation-menu">
+            <div className={
+                `navigation-bar ${isNavExpanded ? "navigation-menu-expanded" : "navigation-menu"}`
+            }>
                 { list.map((item) => (
-                    <li key={item.id}>
+                    <li key={item.id} onClick={() => {
+                        setIsNavExpanded(false)
+                    }}>
                         <AnchorLink href={`#${item.id}`} activeClassName="selected">{item.title}</AnchorLink>
                     </li>
                 )) }
@@ -24,8 +28,12 @@ export const Header = ({ list }) => {
                 <span className="language" ><RussianFlag /></span>
             </div>
 
-            <button className="hamburger">
-                {/* icon from heroicons.com */}
+            <button
+                className="hamburger"
+                onClick={() => {
+                    setIsNavExpanded(!isNavExpanded)
+                }}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
